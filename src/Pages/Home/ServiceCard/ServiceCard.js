@@ -9,8 +9,8 @@ const ServiceCard = ({ service }) => {
                 <img src={img} alt='Shoes' className='rounded-xl' />
             </figure>
             <div className='card-body items-center text-center'>
-                <h2 className='card-title'>{name}</h2>
-                <p>{description}</p>
+                <h2 className='card-title text-accent'>{name}</h2>
+                <p className='text-black'>{description}</p>
             </div>
         </div>
     );
