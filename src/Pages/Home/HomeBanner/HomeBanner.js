@@ -1,12 +1,21 @@
 import React from 'react';
-import './Banner.css';
 import chair from '../../../assets/images/chair.png';
+import backgroundImg from '../../../assets/images/bg.png';
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 
-const Banner = () => {
+const HomeBanner = () => {
     return (
         <section>
-            <div className='banner-container hero lg:h-[800px] mb-12 lg:m-0'>
+            <div
+                className='hero lg:h-[800px] mb-12 lg:m-0'
+                style={{
+                    background: `url(${backgroundImg})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat',
+                    borderRadius: '8px',
+                }}
+            >
                 <div className='hero-content flex-col lg:flex-row-reverse'>
                     <img src={chair} className='rounded-lg lg:w-1/2' />
                     <div>
@@ -26,4 +35,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default HomeBanner;

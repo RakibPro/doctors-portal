@@ -1,5 +1,5 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
+import HomeBanner from '../HomeBanner/HomeBanner';
 import InfoCards from '../InfoCards/InfoCards';
 import Services from '../Services/Services';
 import TreatmentCard from '../TreatmentCard/TreatmentCard';
@@ -10,7 +10,7 @@ import Contact from '../Contact/Contact';
 const Home = () => {
     return (
         <div className='mx-6'>
-            <Banner />
+            <HomeBanner />
             <InfoCards />
             <Services />
             <TreatmentCard />

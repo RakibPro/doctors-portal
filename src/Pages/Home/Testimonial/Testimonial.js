@@ -51,7 +51,7 @@ const Testimonial = () => {
                     />
                 </div>
             </div>
-            <div className='grid gap-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-20'>
+            <div className='grid gap-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 mb-28'>
                 {reviews.map((review) => (
                     <Review key={review.id} review={review} />
                 ))}
