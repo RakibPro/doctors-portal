@@ -13,7 +13,7 @@ const Testimonial = () => {
             img: people1,
             location: 'California',
             userReview:
-                'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+                'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here.',
         },
         {
             id: 2,
@@ -21,7 +21,7 @@ const Testimonial = () => {
             img: people2,
             location: 'New York',
             userReview:
-                'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+                'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here.',
         },
         {
             id: 3,
@@ -29,12 +29,12 @@ const Testimonial = () => {
             img: people3,
             location: 'Georgia',
             userReview:
-                'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+                'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here.',
         },
     ];
     return (
         <section className='my-16'>
-            <div className='flex justify-between'>
+            <div className='flex justify-between mx-6'>
                 <div>
                     <h3 className='text-xl text-secondary font-bold pb-2.5 '>
                         Testimonial
@@ -51,7 +51,7 @@ const Testimonial = () => {
                     />
                 </div>
             </div>
-            <div className='grid gap-14 grid-cols-1 lg:grid-cols-3 my-20'>
+            <div className='grid gap-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-20'>
                 {reviews.map((review) => (
                     <Review key={review.id} review={review} />
                 ))}
