@@ -7,7 +7,12 @@ const MakeAppointment = () => {
     return (
         <section
             className=' mt-48 rounded-lg'
-            style={{ background: `url(${appointment})` }}
+            style={{
+                background: `url(${appointment})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat',
+            }}
         >
             <div className='hero my-28'>
                 <div className='hero-content flex-col lg:flex-row lg:h-[400px] p-10'>
