@@ -29,7 +29,7 @@ const Services = () => {
         },
     ];
     return (
-        <div className='my-20'>
+        <section className='my-20'>
             <div className='text-center mb-20'>
                 <h3 className='text-secondary text-xl font-bold uppercase '>
                     Our Services
@@ -41,7 +41,7 @@ const Services = () => {
                     <ServiceCard key={service.id} service={service} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 
