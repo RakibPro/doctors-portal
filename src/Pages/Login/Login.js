@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    const { register, handleSubmit } = useForm();
-    const [data, setData] = useState('');
+    const {
+        register,
+        formState: { errors },
+        handleSubmit,
+    } = useForm();
 
     const handleLogin = (data) => {
         console.log(data);
@@ -27,8 +30,15 @@ const Login = () => {
                         <input
                             type='email'
                             className='input input-bordered w-full max-w-xs'
-                            {...register('email')}
+                            {...register('email', {
+                                required: 'Please Enter Your Email Address !!!',
+                            })}
                         />
+                        {errors.email && (
+                            <p role='alert' className=' text-error my-3'>
+                                {errors.email?.message}
+                            </p>
+                        )}
                         <label className='label'>
                             <span className='label-text text-black'>
                                 Password
@@ -37,8 +47,20 @@ const Login = () => {
                         <input
                             type='password'
                             className='input input-bordered w-full max-w-xs'
-                            {...register('password')}
+                            {...register('password', {
+                                required: 'Please Enter Password !!!',
+                                minLength: {
+                                    value: 6,
+                                    message:
+                                        'Password must be 6 character or longer',
+                                },
+                            })}
                         />
+                        {errors.password && (
+                            <p role='alert' className=' text-error my-3'>
+                                {errors.password?.message}
+                            </p>
+                        )}
                         <label className='label mb-3'>
                             <Link to='/' className='label-text-alt text-black'>
                                 Forgot Password ?
