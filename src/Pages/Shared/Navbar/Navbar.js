@@ -7,16 +7,16 @@ const Navbar = () => {
             <li>
                 <Link to='/'>Home</Link>
             </li>
-            <li>
+            <li className='ms-1'>
                 <Link to='/appointment'>Appointment</Link>
             </li>
-            <li>
+            <li className='ms-1'>
                 <Link to='/reviews'>Reviews</Link>
             </li>
-            <li>
+            <li className='ms-1'>
                 <Link to='/contact'>Contact Us</Link>
             </li>
-            <li>
+            <li className='ms-1'>
                 <Link to='/login'>Login</Link>
             </li>
         </>
