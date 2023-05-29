@@ -2,16 +2,17 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const SignUp = () => {
     const {
         register,
         formState: { errors },
         handleSubmit,
     } = useForm();
 
-    const handleLogin = (data) => {
+    const handleSignUp = (data) => {
         console.log(data);
     };
+
     return (
         <section className='h-[600px] flex justify-center items-center'>
             <div
@@ -21,8 +22,18 @@ const Login = () => {
                     borderRadius: '18px',
                 }}
             >
-                <h2 className='text-4xl text-center text-black'>Login</h2>
-                <form onSubmit={handleSubmit(handleLogin)}>
+                <h2 className='text-4xl text-center text-black'>Sign Up</h2>
+                <form onSubmit={handleSubmit(handleSignUp)}>
+                    <div className='form-control w-full max-w-xs'>
+                        <label className='label'>
+                            <span className='label-text text-black'>Name</span>
+                        </label>
+                        <input
+                            type='text'
+                            className='input input-bordered w-full'
+                            {...register('name')}
+                        />
+                    </div>
                     <div className='form-control w-full max-w-xs'>
                         <label className='label'>
                             <span className='label-text text-black'>Email</span>
@@ -40,7 +51,7 @@ const Login = () => {
                             </p>
                         )}
                     </div>
-                    <div className='form-control w-full max-w-xs'>
+                    <div className='form-control w-full max-w-xs mb-8'>
                         <label className='label'>
                             <span className='label-text text-black'>
                                 Password
@@ -63,22 +74,17 @@ const Login = () => {
                                 {errors.password?.message}
                             </p>
                         )}
-                        <label className='label mb-3'>
-                            <Link to='/' className='label-text-alt text-black'>
-                                Forgot Password ?
-                            </Link>
-                        </label>
                     </div>
                     <input
                         type='submit'
-                        value='Login'
+                        value='Signup'
                         className='btn btn-accent w-full max-w-xs font-normal text-[#D4D9E3]'
                     />
                     <p className='font-normal text-black text-center text-sm my-4'>
-                        New to Doctors Portal?
-                        <Link to='/signup' className='text-secondary'>
+                        Already have an account?
+                        <Link to='/login' className='text-secondary'>
                             {' '}
-                            Create new account
+                            Please Login
                         </Link>
                     </p>
                     <div className='divider text-black'>OR</div>
@@ -91,4 +97,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignUp;
