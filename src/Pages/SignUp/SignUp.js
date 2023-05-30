@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider';
 
 const SignUp = () => {
     const {
@@ -9,8 +10,16 @@ const SignUp = () => {
         handleSubmit,
     } = useForm();
 
+    const { createUser } = useContext(AuthContext);
+
     const handleSignUp = (data) => {
         console.log(data);
+        createUser(data.email, data.password)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch((error) => console.error(error));
     };
 
     return (
@@ -69,7 +78,8 @@ const SignUp = () => {
                                 },
                                 pattern: {
                                     value: /((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]))/,
-                                    message: 'Password must be strong',
+                                    message:
+                                        'Password must have uppercase, lowercase and number',
                                 },
                             })}
                         />
