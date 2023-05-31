@@ -2,6 +2,7 @@ import React from 'react';
 import chair from '../../../assets/images/chair.png';
 import backgroundImg from '../../../assets/images/bg.png';
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
+import { Link } from 'react-router-dom';
 
 const HomeBanner = () => {
     return (
@@ -27,7 +28,9 @@ const HomeBanner = () => {
                             fugiat ut assumenda excepturi exercitationem quasi.
                             In deleniti eaque aut repudiandae et a id nisi.
                         </p>
-                        <PrimaryButton>Get Started</PrimaryButton>
+                        <Link to='/appointment'>
+                            <PrimaryButton>Get Started</PrimaryButton>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -5992,8 +5992,10 @@ __metadata:
     react-day-picker: ^8.7.1
     react-dom: ^18.2.0
     react-hook-form: ^7.44.2
+    react-hot-toast: ^2.4.1
     react-router-dom: ^6.11.2
     react-scripts: 5.0.1
+    react-scroll-to-top: ^3.0.0
     tailwindcss: ^3.3.2
     web-vitals: ^2.1.0
   languageName: unknown
@@ -7458,6 +7460,15 @@ __metadata:
     merge2: ^1.4.1
     slash: ^3.0.0
   checksum: b4be8885e0cfa018fc783792942d53926c35c50b3aefd3fdcfb9d22c627639dc26bd2327a40a0b74b074100ce95bb7187bfeae2f236856aa3de183af7a02aea6
+  languageName: node
+  linkType: hard
+
+"goober@npm:^2.1.10":
+  version: 2.1.13
+  resolution: "goober@npm:2.1.13"
+  peerDependencies:
+    csstype: ^3.0.10
+  checksum: 0c00b90d26d1a2fad432e311fd4f47bc9fef1eee2a733158d9e2c72a89cf76d414090d063a8d20fe378f2b2b8087df0a83b0f00a3244d1466b97a0d3b14344a7
   languageName: node
   linkType: hard
 
@@ -11583,6 +11594,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hot-toast@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "react-hot-toast@npm:2.4.1"
+  dependencies:
+    goober: ^2.1.10
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: 3e337816db574782454bf09c63a8aca546bf9c5be3f83d0494d24bdcfd97ca2db64d4c151c4ab0184d2342d7a7226403e6812e70caf03c8b55a07787bb4ad0f2
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -11699,6 +11722,15 @@ __metadata:
   bin:
     react-scripts: bin/react-scripts.js
   checksum: 92afa2f245c7092ccc97d5609dc7a2130616262e34da7f15072d9442e2d2e1d4909a91022abd1faac1336eb17c5525a10d9bd43e1ae374c7ec941ca20addca68
+  languageName: node
+  linkType: hard
+
+"react-scroll-to-top@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "react-scroll-to-top@npm:3.0.0"
+  peerDependencies:
+    react: ^16.8.0 || 17.x || ^18
+  checksum: 5d7a38359a06e22d7cd8aa9832bdde6ec57ad0ff16b6e45e5f7d14ab1c04d403d46d0b6fd0f465a3d44b7d4b5c0d3dae2d8f95525877db4f9b927442b0b70f7d
   languageName: node
   linkType: hard
 

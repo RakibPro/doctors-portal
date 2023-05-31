@@ -1,6 +1,7 @@
 import React from 'react';
 import treatment from '../../../assets/images/treatment.png';
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
+import { Link } from 'react-router-dom';
 
 const TreatmentCard = () => {
     return (
@@ -25,7 +26,9 @@ const TreatmentCard = () => {
                             English. Many desktop publishing packages and web
                             page
                         </p>
-                        <PrimaryButton>Get Started</PrimaryButton>
+                        <Link to='/appointment'>
+                            <PrimaryButton>Get Started</PrimaryButton>
+                        </Link>
                     </div>
                 </div>
             </div>

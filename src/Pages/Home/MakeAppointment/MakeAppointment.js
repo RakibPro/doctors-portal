@@ -2,6 +2,7 @@ import React from 'react';
 import appointment from '../../../assets/images/appointment.png';
 import doctor from '../../../assets/images/doctor.png';
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
+import { Link } from 'react-router-dom';
 
 const MakeAppointment = () => {
     return (
@@ -36,7 +37,9 @@ const MakeAppointment = () => {
                             here, content here', making it look like readable
                             English.
                         </p>
-                        <PrimaryButton>Get Appointment</PrimaryButton>
+                        <Link to='/appointment'>
+                            <PrimaryButton>Get Appointment</PrimaryButton>
+                        </Link>
                     </div>
                 </div>
             </div>

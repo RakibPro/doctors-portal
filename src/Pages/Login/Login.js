@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
     const {
@@ -8,9 +10,19 @@ const Login = () => {
         formState: { errors },
         handleSubmit,
     } = useForm();
+    const { loginUser } = useContext(AuthContext);
 
     const handleLogin = (data) => {
         console.log(data);
+        loginUser(data.email, data.password)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                toast.success('Login Success');
+            })
+            .catch((error) => {
+                toast.error(error.message);
+            });
     };
     return (
         <section className='h-[600px] flex justify-center items-center'>
@@ -87,6 +99,7 @@ const Login = () => {
                     </button>
                 </form>
             </div>
+            <Toaster />
         </section>
     );
 };
