@@ -1,24 +1,31 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const {
         register,
         formState: { errors },
         handleSubmit,
+        reset,
     } = useForm();
     const { loginUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const handleLogin = (data) => {
+    const from = location.state?.from?.pathname || '/';
+
+    const handleLogin = (data, e) => {
         console.log(data);
         loginUser(data.email, data.password)
             .then((result) => {
                 const user = result.user;
                 console.log(user);
                 toast.success('Login Success');
+                navigate(from, { replace: true });
+                reset();
             })
             .catch((error) => {
                 toast.error(error.message);
@@ -99,7 +106,6 @@ const Login = () => {
                     </button>
                 </form>
             </div>
-            <Toaster />
         </section>
     );
 };

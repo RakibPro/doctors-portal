@@ -20,6 +20,13 @@ const AppointmentBanner = ({ selectedDate, setSelectedDate }) => {
                     <img src={chair} className='rounded-lg lg:w-1/2' />
                     <div>
                         <DayPicker
+                            style={{
+                                background: '#ffffff',
+                                boxShadow:
+                                    '3px 4px 10px 2px rgba(0, 0, 0, 0.05)',
+                                borderRadius: '18px',
+                                padding: '20px',
+                            }}
                             mode='single'
                             selected={selectedDate}
                             onSelect={setSelectedDate}

@@ -7,6 +7,8 @@ import Appointment from '../../Pages/Appointment/Appointment';
 import Testimonial from '../../Pages/Home/Testimonial/Testimonial';
 import Contact from '../../Pages/Home/Contact/Contact';
 import SignUp from '../../Pages/SignUp/SignUp';
+import Dashboard from '../../Pages/Dashboard/Dashboard/Dashboard';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 export const router = createBrowserRouter([
     {
@@ -23,7 +25,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/reviews',
-                element: <Testimonial />,
+                element: (
+                    <PrivateRoute>
+                        <Testimonial />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: '/contact',
@@ -42,6 +48,14 @@ export const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp />,
+            },
+            {
+                path: '/dashboard',
+                element: (
+                    <PrivateRoute>
+                        <Dashboard />
+                    </PrivateRoute>
+                ),
             },
         ],
     },

@@ -5996,6 +5996,7 @@ __metadata:
     react-router-dom: ^6.11.2
     react-scripts: 5.0.1
     react-scroll-to-top: ^3.0.0
+    react-spinners: ^0.13.8
     tailwindcss: ^3.3.2
     web-vitals: ^2.1.0
   languageName: unknown
@@ -11731,6 +11732,16 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || 17.x || ^18
   checksum: 5d7a38359a06e22d7cd8aa9832bdde6ec57ad0ff16b6e45e5f7d14ab1c04d403d46d0b6fd0f465a3d44b7d4b5c0d3dae2d8f95525877db4f9b927442b0b70f7d
+  languageName: node
+  linkType: hard
+
+"react-spinners@npm:^0.13.8":
+  version: 0.13.8
+  resolution: "react-spinners@npm:0.13.8"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: cb58f916bbf00c4f7fc33c1a75a8c0f91a98a42af26944340a0e29e4b3a97937a03f0292bc444eb5f5f0bea099344b580f9c04a81524246dadbf0571bdb57e62
   languageName: node
   linkType: hard
 

@@ -3,6 +3,7 @@ import {
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
+    updateProfile,
     signOut,
     onAuthStateChanged,
 } from 'firebase/auth';
@@ -13,24 +14,32 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     // Create User
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     };
     // Login User
     const loginUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
+    };
+    // Update User
+    const updateUser = (userInfo) => {
+        return updateProfile(user, userInfo);
     };
     // LogOut User
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
     };
     // Observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            console.log('user observing');
             setUser(currentUser);
+            setLoading(false);
         });
 
         return () => unsubscribe();
@@ -39,8 +48,10 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         createUser,
         loginUser,
-        user,
+        updateUser,
         logOut,
+        user,
+        loading,
     };
 
     return (
