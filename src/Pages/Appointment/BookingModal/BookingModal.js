@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { format } from 'date-fns';
+import { AuthContext } from '../../../context/AuthProvider';
+import toast from 'react-hot-toast';
 
 const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
     const { name, slots } = treatment;
     const date = format(selectedDate, 'PP');
+    const { user } = useContext(AuthContext);
 
     const handleBooking = (e) => {
         e.preventDefault();
@@ -20,8 +23,22 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
             phone,
             email,
         };
-        console.log(booking);
-        setTreatment(null);
+
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(booking),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log('Success:', data);
+                if (data.acknowledged) {
+                    setTreatment(null);
+                    toast.success('Booking Success');
+                }
+            });
     };
 
     return (
@@ -64,18 +81,22 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
                             name='name'
                             type='text'
                             placeholder='Full Name'
-                            className='input input-bordered w-full'
-                        />
-                        <input
-                            name='phone'
-                            type='text'
-                            placeholder='Phone Number'
+                            defaultValue={user?.displayName}
+                            disabled
                             className='input input-bordered w-full'
                         />
                         <input
                             name='email'
                             type='email'
                             placeholder='Email'
+                            defaultValue={user?.email}
+                            disabled
+                            className='input input-bordered w-full'
+                        />
+                        <input
+                            name='phone'
+                            type='text'
+                            placeholder='Phone Number'
                             className='input input-bordered w-full'
                         />
                         <input
