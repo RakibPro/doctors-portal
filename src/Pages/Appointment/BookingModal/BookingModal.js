@@ -3,8 +3,8 @@ import { format } from 'date-fns';
 import { AuthContext } from '../../../context/AuthProvider';
 import toast from 'react-hot-toast';
 
-const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
-    const { name, slots } = treatment;
+const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
+    const { name: treatmentName, slots } = treatment;
     const date = format(selectedDate, 'PP');
     const { user } = useContext(AuthContext);
 
@@ -17,7 +17,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
         const email = form.email.value;
         const booking = {
             appointmentDate: date,
-            treatment: name,
+            treatment: treatmentName,
             patient: name,
             slot,
             phone,
@@ -33,10 +33,13 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log('Success:', data);
                 if (data.acknowledged) {
                     setTreatment(null);
                     toast.success('Booking Success');
+                    refetch();
+                } else {
+                    setTreatment(null);
+                    toast.error(data.message);
                 }
             });
     };
@@ -56,7 +59,9 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
                     >
                         ✕
                     </label>
-                    <h3 className='text-lg font-bold text-black'>{name}</h3>
+                    <h3 className='text-lg font-bold text-black'>
+                        {treatmentName}
+                    </h3>
                     <form
                         onSubmit={handleBooking}
                         className='grid gap-6 grid-cols-1'

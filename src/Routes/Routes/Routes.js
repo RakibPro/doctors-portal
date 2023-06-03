@@ -3,7 +3,7 @@ import Main from '../../Layout/Main';
 import Secondary from '../../Layout/Secondary';
 import Home from '../../Pages/Home/Home/Home';
 import Login from '../../Pages/Login/Login';
-import Appointment from '../../Pages/Appointment/Appointment';
+import Appointment from '../../Pages/Appointment/Appointment/Appointment';
 import Testimonial from '../../Pages/Home/Testimonial/Testimonial';
 import Contact from '../../Pages/Home/Contact/Contact';
 import SignUp from '../../Pages/SignUp/SignUp';
