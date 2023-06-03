@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Main from '../../Layout/Main';
-import Secondary from '../../Layout/Secondary';
+import MainLayout from '../../Layout/MainLayout';
+import SecondaryLayout from '../../Layout/SecondaryLayout';
 import Home from '../../Pages/Home/Home/Home';
 import Login from '../../Pages/Login/Login';
 import Appointment from '../../Pages/Appointment/Appointment/Appointment';
@@ -9,11 +9,12 @@ import Contact from '../../Pages/Home/Contact/Contact';
 import SignUp from '../../Pages/SignUp/SignUp';
 import Dashboard from '../../Pages/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import DashboardLayout from '../../Layout/DashboardLayout';
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <Main />,
+        element: <MainLayout />,
         children: [
             {
                 path: '/',
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
     },
     {
         path: '/',
-        element: <Secondary />,
+        element: <SecondaryLayout />,
         children: [
             {
                 path: '/login',
@@ -56,6 +57,20 @@ export const router = createBrowserRouter([
                         <Dashboard />
                     </PrivateRoute>
                 ),
+            },
+        ],
+    },
+    {
+        path: '/dashboard',
+        element: (
+            <PrivateRoute>
+                <DashboardLayout />
+            </PrivateRoute>
+        ),
+        children: [
+            {
+                path: '/dashboard',
+                element: <Dashboard />,
             },
         ],
     },
