@@ -24,7 +24,8 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
             email,
         };
 
-        fetch('http://localhost:5000/bookings', {
+        const url = 'http://localhost:5000/bookings';
+        fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
