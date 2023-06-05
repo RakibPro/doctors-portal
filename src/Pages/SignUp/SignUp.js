@@ -10,7 +10,6 @@ const SignUp = () => {
         register,
         formState: { errors },
         handleSubmit,
-        reset,
     } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
     const [createdUserEmail, setCreatedUserEmail] = useState('');
@@ -24,7 +23,6 @@ const SignUp = () => {
         createUser(data.email, data.password)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
                 toast.success('User Created Successfully');
 
                 const userInfo = {
@@ -37,7 +35,6 @@ const SignUp = () => {
                     .catch((err) => {
                         console.error(err);
                     });
-                reset();
             })
             .catch((error) => {
                 console.error(error);

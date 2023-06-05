@@ -41,19 +41,18 @@ const MyAppointment = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {bookings &&
-                            bookings?.map((booking, i) => (
-                                <tr
-                                    key={booking._id}
-                                    className='hover cursor-pointer'
-                                >
-                                    <th>{i + 1}</th>
-                                    <td>{booking.patient}</td>
-                                    <td>{booking.treatment}</td>
-                                    <td>{booking.appointmentDate}</td>
-                                    <td>{booking.slot}</td>
-                                </tr>
-                            ))}
+                        {bookings?.map((booking, i) => (
+                            <tr
+                                key={booking._id}
+                                className='hover cursor-pointer'
+                            >
+                                <th>{i + 1}</th>
+                                <td>{booking.patient}</td>
+                                <td>{booking.treatment}</td>
+                                <td>{booking.appointmentDate}</td>
+                                <td>{booking.slot}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
