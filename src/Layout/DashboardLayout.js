@@ -30,14 +30,24 @@ const DashboardLayout = () => {
                     ></label>
                     <ul className='menu p-4 w-80 h-full text-black'>
                         {/* Sidebar content here */}
-                        <li>
+                        <li className='mb-1'>
                             <Link to='/dashboard'>My Appointments</Link>
                         </li>
                         {isAdmin && (
                             <>
-                                <li className='my-2'>
+                                <li className='mb-1'>
                                     <Link to='/dashboard/allusers'>
                                         All Users
+                                    </Link>
+                                </li>
+                                <li className='mb-1'>
+                                    <Link to='/dashboard/adddoctor'>
+                                        Add a Doctor
+                                    </Link>
+                                </li>
+                                <li className='mb-1'>
+                                    <Link to='/dashboard/managedoctors'>
+                                        Manage Doctors
                                     </Link>
                                 </li>
                             </>

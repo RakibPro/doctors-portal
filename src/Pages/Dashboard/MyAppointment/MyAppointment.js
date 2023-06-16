@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../context/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../../Shared/Loading/Loading';
+import toast from 'react-hot-toast';
 
 const MyAppointment = () => {
     const { user } = useContext(AuthContext);
@@ -41,18 +42,45 @@ const MyAppointment = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {bookings?.map((booking, i) => (
-                            <tr
-                                key={booking._id}
-                                className='hover cursor-pointer'
-                            >
-                                <th>{i + 1}</th>
-                                <td>{booking.patient}</td>
-                                <td>{booking.treatment}</td>
-                                <td>{booking.appointmentDate}</td>
-                                <td>{booking.slot}</td>
-                            </tr>
-                        ))}
+                        {
+                            bookings &&
+                                bookings?.map((booking, i) => (
+                                    <tr
+                                        key={booking._id}
+                                        className='hover cursor-pointer'
+                                    >
+                                        <th>{i + 1}</th>
+                                        <td>{booking.patient}</td>
+                                        <td>{booking.treatment}</td>
+                                        <td>{booking.appointmentDate}</td>
+                                        <td>{booking.slot}</td>
+                                    </tr>
+                                ))
+                            //  ? (
+                            //     bookings?.map((booking, i) => (
+                            //         <tr
+                            //             key={booking._id}
+                            //             className='hover cursor-pointer'
+                            //         >
+                            //             <th>{i + 1}</th>
+                            //             <td>{booking.patient}</td>
+                            //             <td>{booking.treatment}</td>
+                            //             <td>{booking.appointmentDate}</td>
+                            //             <td>{booking.slot}</td>
+                            //         </tr>
+                            //     ))
+                            // ) : (
+                            //     <tr>
+                            //         <th className='text-3xl py-10'>
+                            //             No Appointment Here :(
+                            //         </th>
+                            //         <td></td>
+                            //         <td></td>
+                            //         <td></td>
+                            //         <td></td>
+                            //     </tr>
+                            // )
+                        }
                     </tbody>
                 </table>
             </div>

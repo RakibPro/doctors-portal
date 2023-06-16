@@ -38,8 +38,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-day-picker", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:8.7.1"],\
             ["react-dom", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:18.2.0"],\
+            ["react-dropzone", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:14.2.3"],\
             ["react-hook-form", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:7.44.2"],\
             ["react-hot-toast", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:2.4.1"],\
+            ["react-icons", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:4.9.0"],\
             ["react-router-dom", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:6.11.2"],\
             ["react-scripts", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:5.0.1"],\
             ["react-scroll-to-top", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:3.0.0"],\
@@ -7154,6 +7156,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["attr-accept", [\
+        ["npm:2.2.2", {\
+          "packageLocation": "./.yarn/cache/attr-accept-npm-2.2.2-b9cd0d8eac-496f724935.zip/node_modules/attr-accept/",\
+          "packageDependencies": [\
+            ["attr-accept", "npm:2.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["autoprefixer", [\
         ["npm:10.4.14", {\
           "packageLocation": "./.yarn/cache/autoprefixer-npm-10.4.14-1e0b8c34fb-e9f18e664a.zip/node_modules/autoprefixer/",\
@@ -9134,8 +9145,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-day-picker", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:8.7.1"],\
             ["react-dom", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:18.2.0"],\
+            ["react-dropzone", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:14.2.3"],\
             ["react-hook-form", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:7.44.2"],\
             ["react-hot-toast", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:2.4.1"],\
+            ["react-icons", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:4.9.0"],\
             ["react-router-dom", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:6.11.2"],\
             ["react-scripts", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:5.0.1"],\
             ["react-scroll-to-top", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:3.0.0"],\
@@ -10345,6 +10358,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/webpack",\
             "webpack"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["file-selector", [\
+        ["npm:0.6.0", {\
+          "packageLocation": "./.yarn/cache/file-selector-npm-0.6.0-04259af1f7-7d051b6e5d.zip/node_modules/file-selector/",\
+          "packageDependencies": [\
+            ["file-selector", "npm:0.6.0"],\
+            ["tslib", "npm:2.5.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16400,6 +16423,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-dropzone", [\
+        ["npm:14.2.3", {\
+          "packageLocation": "./.yarn/cache/react-dropzone-npm-14.2.3-b5d5b11ea4-174b744d5c.zip/node_modules/react-dropzone/",\
+          "packageDependencies": [\
+            ["react-dropzone", "npm:14.2.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:14.2.3", {\
+          "packageLocation": "./.yarn/__virtual__/react-dropzone-virtual-683ef18784/0/cache/react-dropzone-npm-14.2.3-b5d5b11ea4-174b744d5c.zip/node_modules/react-dropzone/",\
+          "packageDependencies": [\
+            ["react-dropzone", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:14.2.3"],\
+            ["@types/react", null],\
+            ["attr-accept", "npm:2.2.2"],\
+            ["file-selector", "npm:0.6.0"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-error-overlay", [\
         ["npm:6.0.11", {\
           "packageLocation": "./.yarn/cache/react-error-overlay-npm-6.0.11-021cdeaa92-ce7b44c38f.zip/node_modules/react-error-overlay/",\
@@ -16453,6 +16501,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react-dom",\
             "@types/react",\
             "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-icons", [\
+        ["npm:4.9.0", {\
+          "packageLocation": "./.yarn/cache/react-icons-npm-4.9.0-633c387145-69d1000d02.zip/node_modules/react-icons/",\
+          "packageDependencies": [\
+            ["react-icons", "npm:4.9.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:4.9.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-icons-virtual-383d780461/0/cache/react-icons-npm-4.9.0-633c387145-69d1000d02.zip/node_modules/react-icons/",\
+          "packageDependencies": [\
+            ["react-icons", "virtual:d72f6d9627279bb9ed6112db9a7e9f8ee4023fb58b137bd804f935fb16a5e0f5b4cb862bc674e2b7cb0e643ad026c0f4e86667342fa96509f7ea12016e7a9840#npm:4.9.0"],\
+            ["@types/react", null],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
             "react"\
           ],\
           "linkType": "HARD"\
@@ -18335,6 +18405,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.5.2-3f1b58afbb-4d3c1e238b.zip/node_modules/tslib/",\
           "packageDependencies": [\
             ["tslib", "npm:2.5.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.5.3", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.5.3-7756051e02-88902b309a.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.5.3"]\
           ],\
           "linkType": "HARD"\
         }]\
