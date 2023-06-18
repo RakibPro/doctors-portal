@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../../Shared/Loading/Loading';
 import toast from 'react-hot-toast';
@@ -18,11 +18,8 @@ const AllUsers = () => {
         },
     });
 
-    if (isLoading) {
-        return <Loading />;
-    }
-
-    const handleMakeAdmin = (id) => {
+    // Make Admin Function
+    const handleMakeAdmin = (id, name) => {
         const url = `http://localhost:5000/users/admin/${id}`;
         fetch(url, {
             method: 'PUT',
@@ -33,16 +30,20 @@ const AllUsers = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.modifiedCount > 0) {
-                    toast.success('This User Is Now Admin');
+                    toast.success(`${name} Is Now Admin`);
                     refetch();
                 } else {
                 }
             });
     };
 
+    if (isLoading) {
+        return <Loading />;
+    }
+
     return (
         <section className='m-14'>
-            <h2 className='text-3xl text-black mb-4'>My Appointment</h2>
+            <h2 className='text-2xl text-black font-bold my-10'>All Users</h2>
             <div className='overflow-x-auto'>
                 <table className='table w-full'>
                     <thead>
@@ -51,7 +52,6 @@ const AllUsers = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,18 +64,16 @@ const AllUsers = () => {
                                     {user?.role !== 'admin' && (
                                         <button
                                             onClick={() =>
-                                                handleMakeAdmin(user._id)
+                                                handleMakeAdmin(
+                                                    user._id,
+                                                    user.name
+                                                )
                                             }
-                                            className='btn btn-secondary'
+                                            className='btn btn-secondary text-white'
                                         >
                                             Make Admin
                                         </button>
                                     )}
-                                </td>
-                                <td>
-                                    <button className='btn btn-error'>
-                                        Delete
-                                    </button>
                                 </td>
                             </tr>
                         ))}

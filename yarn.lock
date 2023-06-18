@@ -6033,6 +6033,7 @@ __metadata:
     react-scripts: 5.0.1
     react-scroll-to-top: ^3.0.0
     react-spinners: ^0.13.8
+    sweetalert2: ^11.7.12
     tailwindcss: ^3.3.2
     web-vitals: ^2.1.0
   languageName: unknown
@@ -13012,6 +13013,13 @@ __metadata:
   bin:
     svgo: bin/svgo
   checksum: b92f71a8541468ffd0b81b8cdb36b1e242eea320bf3c1a9b2c8809945853e9d8c80c19744267eb91cabf06ae9d5fff3592d677df85a31be4ed59ff78534fa420
+  languageName: node
+  linkType: hard
+
+"sweetalert2@npm:^11.7.12":
+  version: 11.7.12
+  resolution: "sweetalert2@npm:11.7.12"
+  checksum: 3f0d26399f7660bf8f410686d9e53bc2216e973a6cedd53a4566fd3f5952e642cf012d0ae68bc47d89cb2e29244ea54489c524217481581945983e5138ce1510
   languageName: node
   linkType: hard
 
