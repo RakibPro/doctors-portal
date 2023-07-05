@@ -43,10 +43,10 @@ const AllUsers = () => {
 
     return (
         <section className='m-14'>
-            <h2 className='text-2xl text-black font-bold my-10'>All Users</h2>
-            <div className='overflow-x-auto'>
+            <h2 className='text-2xl text-black font-bold mb-6'>All Users</h2>
+            <div className='overflow-x-auto rounded-lg'>
                 <table className='table w-full'>
-                    <thead>
+                    <thead className='bg-[#E6E6E6] text-black uppercase'>
                         <tr>
                             <th></th>
                             <th>Name</th>
@@ -54,9 +54,9 @@ const AllUsers = () => {
                             <th>Role</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='bg-white'>
                         {users?.map((user, i) => (
-                            <tr key={user._id} className='hover cursor-pointer'>
+                            <tr key={user._id} className='hover'>
                                 <th>{i + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
@@ -69,7 +69,7 @@ const AllUsers = () => {
                                                     user.name
                                                 )
                                             }
-                                            className='btn btn-secondary text-white'
+                                            className='btn btn-secondary btn-sm text-white'
                                         >
                                             Make Admin
                                         </button>

@@ -67,30 +67,27 @@ const ManageDoctors = () => {
 
     return (
         <section className='m-14'>
-            <h2 className='text-2xl text-black font-bold my-10'>
+            <h2 className='text-2xl text-black font-bold mb-6'>
                 Manage Doctors
             </h2>
-            <div className='overflow-x-auto'>
+            <div className='overflow-x-auto rounded-lg'>
                 <table className='table w-full'>
-                    <thead>
+                    <thead className='bg-[#E6E6E6] text-black uppercase'>
                         <tr>
                             <th></th>
                             <th>Avatar</th>
                             <th>Name</th>
-                            <th>Speciality</th>
+                            <th>Specialty</th>
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='bg-white'>
                         {doctors?.map((doctor, i) => (
-                            <tr
-                                key={doctor._id}
-                                className='hover cursor-pointer'
-                            >
+                            <tr key={doctor._id} className='hover'>
                                 <th>{i + 1}</th>
                                 <td>
                                     <div className='avatar'>
-                                        <div className='w-20 rounded-full'>
+                                        <div className='w-16 rounded-full'>
                                             <img src={doctor.image} />
                                         </div>
                                     </div>
@@ -105,7 +102,7 @@ const ManageDoctors = () => {
                                                 doctor.name
                                             )
                                         }
-                                        className='btn btn-error text-white'
+                                        className='btn btn-error btn-sm text-white'
                                     >
                                         Delete
                                     </button>

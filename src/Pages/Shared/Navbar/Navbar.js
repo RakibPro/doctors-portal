@@ -21,26 +21,26 @@ const Navbar = () => {
             <li>
                 <Link to='/'>Home</Link>
             </li>
-            <li className='ms-1'>
+            <li>
                 <Link to='/appointment'>Appointment</Link>
             </li>
-            <li className='ms-1'>
+            <li>
                 <Link to='/reviews'>Reviews</Link>
             </li>
-            <li className='ms-1'>
+            <li>
                 <Link to='/contact'>Contact Us</Link>
             </li>
             {user?.uid ? (
                 <>
-                    <li className='ms-1'>
+                    <li>
                         <Link to='/dashboard'>Dashboard</Link>
                     </li>
-                    <li className='ms-1'>
+                    <li>
                         <button onClick={handleLogOut}>SignOut</button>
                     </li>
                 </>
             ) : (
-                <li className='ms-1'>
+                <li>
                     <Link to='/login'>Login</Link>
                 </li>
             )}
@@ -68,7 +68,7 @@ const Navbar = () => {
                     </label>
                     <ul
                         tabIndex={1}
-                        className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
+                        className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-50'
                     >
                         {menuItems}
                     </ul>
@@ -78,7 +78,7 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className='navbar-center hidden lg:flex navbar-end'>
-                <ul className='menu menu-horizontal px-1'>{menuItems}</ul>
+                <ul className='menu menu-horizontal px-1 '>{menuItems}</ul>
             </div>
             <label
                 htmlFor='dashboard-drawer'

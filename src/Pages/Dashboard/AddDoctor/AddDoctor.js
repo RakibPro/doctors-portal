@@ -73,12 +73,12 @@ const AddDoctor = () => {
     }
 
     return (
-        <section className='h-[600px]'>
-            <h2 className='text-2xl text-black font-bold m-12'>
+        <section className='h-[600px] m-14'>
+            <h2 className='text-2xl text-black font-bold mb-6'>
                 Add a New Doctor
             </h2>
 
-            <div className='flex justify-start ms-12 g '>
+            <div className='flex justify-start '>
                 <div className='w-72 md:w-80 lg:w-96 p-12 rounded-lg bg-white'>
                     <form onSubmit={handleSubmit(handleAddDoctor)}>
                         <div className='form-control w-full max-w-xs'>

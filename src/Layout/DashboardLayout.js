@@ -10,14 +10,14 @@ const DashboardLayout = () => {
     return (
         <div>
             <Navbar />
-            <div className='drawer drawer-mobile'>
+            <div className='drawer lg:drawer-open'>
                 <input
                     id='dashboard-drawer'
                     type='checkbox'
                     className='drawer-toggle'
                 />
                 <div
-                    className='drawer-content '
+                    className='drawer-content rounded-tl-lg'
                     style={{ background: '#F1F5F9' }}
                 >
                     {/* Page content here */}
@@ -28,7 +28,7 @@ const DashboardLayout = () => {
                         htmlFor='dashboard-drawer'
                         className='drawer-overlay'
                     ></label>
-                    <ul className='menu p-4 w-80 h-full text-black'>
+                    <ul className='menu p-4 w-80 h-full bg-white text-black'>
                         {/* Sidebar content here */}
                         <li className='mb-1'>
                             <Link to='/dashboard'>My Appointments</Link>

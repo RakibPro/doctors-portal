@@ -3087,6 +3087,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stripe/react-stripe-js@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@stripe/react-stripe-js@npm:2.1.1"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    "@stripe/stripe-js": ^1.44.1
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: b9c0a2d3f98d757c84698560ba78ca619bdf21f6730157663ceb51396d494f6a2c221eada7dd518bcdde5cf7da242a26be0df385962e231c4bdecb38d9076923
+  languageName: node
+  linkType: hard
+
+"@stripe/stripe-js@npm:^1.54.1":
+  version: 1.54.1
+  resolution: "@stripe/stripe-js@npm:1.54.1"
+  checksum: eb54054edea3d3f9a8c18e8442cc05b46f7afbe5bd85863121737f268875d30aab6de16ee84d467853ad9d983bf69f922f45daeee6f13134ca138f7e862c9eb4
+  languageName: node
+  linkType: hard
+
 "@surma/rollup-plugin-off-main-thread@npm:^2.2.3":
   version: 2.2.3
   resolution: "@surma/rollup-plugin-off-main-thread@npm:2.2.3"
@@ -5185,20 +5205,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-name@npm:^1.0.0, color-name@npm:~1.1.4":
+"color-name@npm:~1.1.4":
   version: 1.1.4
   resolution: "color-name@npm:1.1.4"
   checksum: b0445859521eb4021cd0fb0cc1a75cecf67fceecae89b63f62b201cca8d345baf8b952c966862a9d9a2632987d4f6581f0ec8d957dfacece86f0a7919316f610
-  languageName: node
-  linkType: hard
-
-"color-string@npm:^1.9.0":
-  version: 1.9.1
-  resolution: "color-string@npm:1.9.1"
-  dependencies:
-    color-name: ^1.0.0
-    simple-swizzle: ^0.2.2
-  checksum: c13fe7cff7885f603f49105827d621ce87f4571d78ba28ef4a3f1a104304748f620615e6bf065ecd2145d0d9dad83a3553f52bb25ede7239d18e9f81622f1cc5
   languageName: node
   linkType: hard
 
@@ -5211,17 +5221,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color@npm:^4.2":
-  version: 4.2.3
-  resolution: "color@npm:4.2.3"
-  dependencies:
-    color-convert: ^2.0.1
-    color-string: ^1.9.0
-  checksum: 0579629c02c631b426780038da929cca8e8d80a40158b09811a0112a107c62e10e4aad719843b791b1e658ab4e800558f2e87ca4522c8b32349d497ecb6adeb4
-  languageName: node
-  linkType: hard
-
-"colord@npm:^2.9.1":
+"colord@npm:^2.9, colord@npm:^2.9.1":
   version: 2.9.3
   resolution: "colord@npm:2.9.3"
   checksum: 95d909bfbcfd8d5605cbb5af56f2d1ce2b323990258fd7c0d2eb0e6d3bb177254d7fb8213758db56bb4ede708964f78c6b992b326615f81a18a6aaf11d64c650
@@ -5577,7 +5577,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-selector-tokenizer@npm:^0.8.0":
+"css-selector-tokenizer@npm:^0.8":
   version: 0.8.0
   resolution: "css-selector-tokenizer@npm:0.8.0"
   dependencies:
@@ -5744,18 +5744,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^2.51.6":
-  version: 2.51.6
-  resolution: "daisyui@npm:2.51.6"
+"daisyui@npm:^3.1.6":
+  version: 3.1.6
+  resolution: "daisyui@npm:3.1.6"
   dependencies:
-    color: ^4.2
-    css-selector-tokenizer: ^0.8.0
-    postcss-js: ^4.0.0
+    colord: ^2.9
+    css-selector-tokenizer: ^0.8
+    postcss-js: ^4
     tailwindcss: ^3
   peerDependencies:
-    autoprefixer: ^10.0.2
-    postcss: ^8.1.6
-  checksum: cd3444a5031f81a10a5e33154ff2072430a318ad8904a51a0fb9a7e29bd687eed187571348d8c22fdcfd60d6cdd86556297ed4654cdfa898fec8fb1f8b565e54
+    postcss: ^8
+  checksum: 339f9dc1ccf0c8f4d60a8dadec086b0344d804138ed06b3df8dfae41b3e9f643184ccc0ec89b0f20303d62aacee71a8b95c292defdd2604d94ec7d289fd3596b
   languageName: node
   linkType: hard
 
@@ -6015,11 +6014,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "doctors-portal-client@workspace:."
   dependencies:
+    "@stripe/react-stripe-js": ^2.1.1
+    "@stripe/stripe-js": ^1.54.1
     "@tanstack/react-query": ^4.29.12
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
-    daisyui: ^2.51.6
+    daisyui: ^3.1.6
     date-fns: ^2.30.0
     firebase: ^9.22.1
     react: ^18.2.0
@@ -8054,13 +8055,6 @@ __metadata:
   version: 0.2.1
   resolution: "is-arrayish@npm:0.2.1"
   checksum: eef4417e3c10e60e2c810b6084942b3ead455af16c4509959a27e490e7aee87cfb3f38e01bbde92220b528a0ee1a18d52b787e1458ee86174d8c7f0e58cd488f
-  languageName: node
-  linkType: hard
-
-"is-arrayish@npm:^0.3.1":
-  version: 0.3.2
-  resolution: "is-arrayish@npm:0.3.2"
-  checksum: 977e64f54d91c8f169b59afcd80ff19227e9f5c791fa28fa2e5bce355cbaf6c2c356711b734656e80c9dd4a854dd7efcf7894402f1031dfc5de5d620775b4d5f
   languageName: node
   linkType: hard
 
@@ -10750,7 +10744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-js@npm:^4.0.0, postcss-js@npm:^4.0.1":
+"postcss-js@npm:^4, postcss-js@npm:^4.0.1":
   version: 4.0.1
   resolution: "postcss-js@npm:4.0.1"
   dependencies:
@@ -11411,7 +11405,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -12480,15 +12474,6 @@ __metadata:
   version: 3.0.7
   resolution: "signal-exit@npm:3.0.7"
   checksum: a2f098f247adc367dffc27845853e9959b9e88b01cb301658cfe4194352d8d2bb32e18467c786a7fe15f1d44b233ea35633d076d5e737870b7139949d1ab6318
-  languageName: node
-  linkType: hard
-
-"simple-swizzle@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "simple-swizzle@npm:0.2.2"
-  dependencies:
-    is-arrayish: ^0.3.1
-  checksum: a7f3f2ab5c76c4472d5c578df892e857323e452d9f392e1b5cf74b74db66e6294a1e1b8b390b519fa1b96b5b613f2a37db6cffef52c3f1f8f3c5ea64eb2d54c0
   languageName: node
   linkType: hard
 
